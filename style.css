@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
+
+body{
+    font-family: 'Raleway',sans-serif;
+    font-size: 1.5rem;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    text-align: center;
+    margin: 4rem 0 3rem;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+section{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    border: 1px solid black;
+    background-color: rgb(141, 141, 141);
+}
+
+#chicken h2{
+    background-color: rgb(235, 158, 170);
+    width: 10rem;
+}
+#beef h2{
+    background-color: rgb(218, 67, 67);
+    width: 10rem;
+}
+#sushi h2{
+    background-color: rgb(224, 184, 2);
+    width: 10rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+p{
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 992px){
+    #chicken{
+        grid-column: 1 / 4;
+        margin: 2rem 1rem 2rem 2rem
+    }
+    #beef{
+        grid-column: 4 / 7;
+        margin: 2rem 1rem;
+    }
+    #sushi{
+        grid-column: 7 / 10;
+        margin: 2rem 2rem 2rem 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    main{
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    #chicken{
+        grid-column: 1 / 5;
+        grid-row: 1/2;
+        margin: 2rem 1rem 2rem 2rem
+    }
+    #beef{
+        grid-column: 5 / 10;
+        grid-row: 1/2;
+        margin: 2rem 2rem 2rem 1rem;
+    }
+    #sushi{
+        grid-column: 1 / 10;
+        grid-row: 2/3;
+        margin: 0 2rem auto 2rem;
+    }
+}
+
+@media (max-width: 767px){
+    header{
+        margin: 2rem;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 2rem;
+    }
+    p, h2{
+        font-size: 69%;
+    }
+    #chicken{
+        grid-row: 1 / 2;
+        margin-inline: 2rem;
+    }
+    #beef{
+        grid-row: 2 / 3;
+        margin-inline: 2rem;
+    }
+    #sushi{
+        grid-row: 3 / 4;
+        margin-inline: 2rem;
+    }
+}
