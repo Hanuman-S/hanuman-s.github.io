@@ -78,7 +78,7 @@ async function checkPwd(){
         disData();
     } else {
         console.log("Congratulations you have signed up");
-        console.log(`Username : ${useName}\n Email : ${mail}\n password : ${pwd}`);
+        console.log(`Username : ${useName.value}\n Email : ${mail.value}\n password : ${pwd.value}`);
     }
 }
 
